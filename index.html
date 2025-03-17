@@ -1,0 +1,1232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Hanami Patron</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ===== BASE STYLES AND VARIABLES ===== */
+      :root {
+        --primary: #3b7e9b;
+        --accent1: #ff667d;
+        --accent2: #5cb2af;
+        --accent3: #7dd8c3;
+        --text: #333;
+        --light-bg: #f8f5f2;
+        --warm-white: #fffcf7;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Lora", serif;
+        line-height: 1.6;
+        color: var(--text);
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: var(--warm-white);
+        font-size: 18px;
+        padding: 0;
+        position: relative;
+      }
+
+      .container {
+        padding: 40px;
+      }
+
+      /* ===== TYPOGRAPHY ===== */
+      h1 {
+        font-family: "Source Sans Pro", sans-serif;
+        color: var(--primary);
+        font-size: 3.5rem;
+        line-height: 1.1;
+        margin-bottom: 25px;
+        max-width: 800px;
+      }
+
+      h1 .highlight {
+        color: var(--accent1);
+      }
+
+      h2 {
+        font-family: "Source Sans Pro", sans-serif;
+        color: var(--primary);
+        font-size: 2.2rem;
+        margin: 50px 0 30px;
+        line-height: 1.1;
+      }
+
+      h3 {
+        font-family: "Source Sans Pro", sans-serif;
+        color: var(--primary);
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+
+      strong {
+        color: var(--primary);
+      }
+
+      .handwritten {
+        font-family: "Lora", serif;
+        font-style: italic;
+        color: var(--accent1);
+      }
+
+      .emphasis {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.3rem;
+        color: var(--primary);
+        font-weight: 600;
+        margin: 1em 0;
+      }
+
+      .note {
+        font-style: italic;
+        color: #666;
+        margin-top: 25px;
+      }
+
+      /* ===== LINKS ===== */
+      a {
+        color: var(--primary);
+        text-decoration: underline;
+        text-decoration-color: rgba(59, 126, 155, 0.3);
+        text-underline-offset: 2px;
+        transition:
+          color 0.2s,
+          text-decoration-color 0.2s;
+      }
+
+      a:hover {
+        color: var(--accent1);
+        text-decoration-color: rgba(255, 102, 125, 0.4);
+      }
+
+      /* ===== GENERAL LIST STYLES ===== */
+      ul:not([class]) {
+        margin: 1em 0 2em;
+        padding-left: 25px;
+      }
+
+      ul:not([class]) li {
+        margin-bottom: 0.3em;
+      }
+
+      /* ===== HEADER STYLES ===== */
+      header {
+        text-align: left;
+        margin-bottom: 60px;
+        position: relative;
+      }
+
+      .logo-container {
+        position: absolute;
+        left: -90px;
+        top: 2px;
+        width: 60px;
+        height: 60px;
+      }
+
+      .hanami-logo {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+
+      .intro {
+        font-size: 1.4rem;
+        max-width: 800px;
+        margin-bottom: 40px;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      /* Inline progress indicator */
+      .inline-progress {
+        display: inline-flex;
+        align-items: center;
+        background-color: #fff1f1;
+        padding: 2px 10px;
+        border-radius: 4px;
+        margin-left: 5px;
+        white-space: nowrap;
+        color: var(--accent1);
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 0.9em;
+        vertical-align: middle;
+        line-height: normal;
+        height: 1.8em;
+      }
+
+      .inline-progress:hover {
+        background-color: #ffebe8;
+      }
+
+      .inline-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: var(--accent1);
+        border-radius: 50%;
+        margin-right: 5px;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(255, 102, 125, 0.5);
+        }
+        70% {
+          transform: scale(1.1);
+          box-shadow: 0 0 0 6px rgba(255, 102, 125, 0);
+        }
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(255, 102, 125, 0);
+        }
+      }
+
+      /* ===== MAIN CONTENT LAYOUT ===== */
+      .main-content {
+        max-width: 700px;
+      }
+
+      section {
+        margin: 70px 0;
+      }
+
+      /* ===== LETTER STYLES ===== */
+      .letter-container {
+        background-color: #fcfaf5;
+        padding: 30px;
+        border: 1px solid #e8e0d8;
+        border-radius: 3px;
+        margin-bottom: 60px;
+        position: relative;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+        transform: rotate(-0.5deg);
+        z-index: 1;
+      }
+
+      .letter-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e8e0d8' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 5v1H5V0zm1 5v1H5v-1h1z'/%3E%3C/g%3E%3C/svg%3E");
+        border-radius: 3px;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .letter {
+        position: relative;
+        line-height: 1.7;
+        font-size: 1.1rem;
+      }
+
+      .letter p {
+        margin-bottom: 20px;
+      }
+
+      .letter ul {
+        list-style-type: none;
+        margin: 20px 0 30px;
+        padding-left: 5px;
+      }
+
+      .letter li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .letter li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--text);
+      }
+
+      .signature {
+        font-style: italic;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        border-top: 1px solid #e8e0d8;
+        padding-top: 20px;
+        font-size: 1.2rem;
+        transform: rotate(-1deg);
+        display: inline-block;
+      }
+
+      /* ===== PROGRESS BAR STYLES ===== */
+      .full-progress-container {
+        margin: 30px -25px;
+        position: relative;
+      }
+
+      .full-progress {
+        border: 1px solid #e8e0d8;
+        border-radius: 8px;
+        padding: 25px 30px 45px 25px;
+        background-color: white;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .progress-header {
+        margin-bottom: 15px;
+      }
+
+      .current-amount {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 2.8rem;
+        color: var(--accent1);
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+
+      .target {
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: var(--primary);
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .donate-now-link {
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--accent1);
+        text-decoration: none;
+        white-space: nowrap;
+        text-align: right;
+      }
+
+      .donate-now-link::after {
+        content: "→";
+        margin-left: 5px;
+        transition: transform 0.2s;
+        display: inline-block;
+      }
+
+      .donate-now-link:hover::after {
+        transform: translateX(3px);
+      }
+
+      .donate-now-link:hover {
+        color: #ff4c67;
+      }
+
+      .progress-bar-wrapper {
+        position: relative;
+        margin-bottom: 30px; /* Increased margin to accommodate percentage tick */
+      }
+
+      .progress-bar {
+        height: 20px;
+        background-color: #f0f0f0;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background-color: var(--accent1);
+        width: 33%;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .progress-fill::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.2) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.2) 75%,
+          transparent 75%,
+          transparent
+        );
+        background-size: 30px 30px;
+        animation: barberpole 8s linear infinite;
+        z-index: 1;
+      }
+
+      @keyframes barberpole {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 60px 30px;
+        }
+      }
+
+      /* Style for the percentage tick */
+      .percentage-tick {
+        position: absolute;
+        top: 100%;
+        left: 33%; /* Match the progress fill width */
+        transform: translateX(-50%);
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--accent1);
+        margin-top: 8px;
+        text-align: center;
+      }
+
+      .percentage-tick::before {
+        content: "";
+        display: block;
+        height: 10px;
+        width: 2px;
+        background-color: var(--accent1);
+        margin: 0 auto 4px;
+      }
+
+      /* Milestone ticks */
+      .progress-milestones {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+        position: relative;
+      }
+
+      .milestone-tick {
+        position: absolute;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 0.8rem;
+        color: var(--text);
+        transform: translateX(-50%);
+      }
+
+      .milestone-tick::before {
+        content: "";
+        display: block;
+        height: 8px;
+        width: 1px;
+        background-color: #ccc;
+        margin: 0 auto 2px;
+      }
+
+      .milestone-tick.m1 {
+        left: 57%;
+      }
+
+      .milestone-tick.m2 {
+        left: 98%;
+        transform: translateX(-50%);
+      }
+
+      .milestone-tick.m2::before {
+        margin: 0 auto 2px;
+      }
+
+      /* ===== MILESTONE STYLES ===== */
+      .milestone {
+        margin-bottom: 50px;
+        position: relative;
+      }
+
+      .milestone-info {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+      }
+
+      .milestone-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid var(--accent1);
+        overflow: hidden;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        margin-right: 15px;
+        flex-shrink: 0;
+      }
+
+      .milestone-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .milestone-person {
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 3px;
+      }
+
+      .milestone-role {
+        font-size: 0.9rem;
+        color: #666;
+        font-style: italic;
+      }
+
+      .milestone p {
+        margin-bottom: 10px;
+      }
+
+      .milestone-number {
+        color: var(--accent1);
+      }
+
+      /* ===== SPONSORS SECTION ===== */
+      .sponsors-wrapper {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .sponsors {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin: 30px 0 40px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .sponsor-logo {
+        background-color: #eee;
+        aspect-ratio: 16/9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-family: "Source Sans Pro", sans-serif;
+        color: #999;
+        width: 100%;
+      }
+
+      /* ===== TESTIMONIALS ===== */
+      .testimonials {
+        margin: 40px 0 30px;
+      }
+
+      .testimonial-list {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-top: 25px;
+      }
+
+      .testimonial {
+        border-left: 2px solid var(--accent1);
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .testimonial-content {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        font-style: italic;
+        margin-bottom: 12px;
+        color: var(--text);
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: baseline;
+        margin-top: 10px;
+      }
+
+      .testimonial-name {
+        font-weight: 600;
+        color: var(--primary);
+        font-family: "Source Sans Pro", sans-serif;
+      }
+
+      .testimonial-role {
+        font-size: 0.9rem;
+        color: #666;
+        margin-left: 5px;
+      }
+
+      .testimonial-role::before {
+        content: "—";
+        margin-right: 5px;
+        color: #999;
+      }
+
+      /* ===== THANK YOU NOTE ===== */
+      .thank-you-container {
+        background-color: #fcfaf5;
+        padding: 30px;
+        border: 1px solid #e8e0d8;
+        border-radius: 3px;
+        margin: 70px 0 30px;
+        position: relative;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+        transform: rotate(0.5deg);
+        z-index: 1;
+      }
+
+      .thank-you-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e8e0d8' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 5v1H5V0zm1 5v1H5v-1h1z'/%3E%3C/g%3E%3C/svg%3E");
+        border-radius: 3px;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .thank-you {
+        position: relative;
+        line-height: 1.7;
+        font-size: 1.1rem;
+      }
+
+      .thank-you p {
+        margin-bottom: 20px;
+      }
+
+      .thank-you p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Signature with avatar */
+      .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+        border: 2px solid #e8e0d8;
+        transform: rotate(-1.5deg);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .signature-with-avatar {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        border-top: 1px solid #e8e0d8;
+        padding-top: 20px;
+      }
+
+      .signature {
+        font-style: italic;
+        font-size: 1.2rem;
+        transform: rotate(-1deg);
+        display: inline-block;
+        margin: 0;
+        border-top: none;
+        padding-top: 0;
+      }
+
+      /* ===== BUSINESS PATRON BENEFITS ===== */
+      .benefits-list {
+        list-style-type: none;
+        margin: 1em 0 1em;
+      }
+
+      .benefits-list li {
+        margin-bottom: 0.5em;
+        padding-left: 30px;
+        position: relative;
+        font-size: 1.1rem;
+      }
+
+      .benefits-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--accent1);
+        font-weight: bold;
+      }
+
+      /* ===== PRICING TIERS ===== */
+      .tier-vertical {
+        margin: 32px 0;
+        background-color: transparent;
+        border-left: 3px solid transparent;
+        padding: 10px 0 5px 20px;
+        position: relative;
+      }
+
+      .tier-1 {
+        border-left-color: var(--accent1);
+      }
+
+      .tier-2 {
+        border-left-color: var(--accent2);
+      }
+
+      .tier-3 {
+        border-left-color: var(--accent3);
+      }
+
+      .tier-vertical::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -3px;
+        right: 0;
+        height: 1px;
+        background-color: #e8e0d8;
+      }
+
+      .tier-vertical:first-of-type::before {
+        display: none;
+      }
+
+      .tier-header {
+        padding: 5px 0 15px 0;
+        border-bottom: none;
+      }
+
+      .tier-price {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-top: 5px;
+      }
+
+      .tier-1 .tier-price {
+        color: var(--accent1);
+      }
+
+      .tier-2 .tier-price {
+        color: var(--accent2);
+      }
+
+      .tier-3 .tier-price {
+        color: var(--accent3);
+      }
+
+      .tier-content {
+        padding: 0;
+      }
+
+      .tier-content ul {
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0; /* Remove padding to override global list style */
+      }
+
+      .tier-content li {
+        padding-left: 24px;
+        position: relative;
+        line-height: 1.5;
+        margin-bottom: 8px !important;
+        font-size: 0.98rem;
+      }
+
+      .tier-content li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+
+      .tier-1 .tier-content li::before {
+        color: var(--accent1);
+      }
+
+      .tier-2 .tier-content li::before {
+        color: var(--accent2);
+      }
+
+      .tier-3 .tier-content li::before {
+        color: var(--accent3);
+      }
+
+      .tier-footnote {
+        margin: 30px 0 20px 0;
+        color: #666;
+        font-style: italic;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        border-top: 1px solid #e8e0d8;
+        padding-top: 25px;
+      }
+
+      .tiers-section {
+        position: relative;
+      }
+
+      /* ===== CTA BUTTON ===== */
+      .cta-container {
+        margin: 40px 0 20px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: var(--accent1);
+        color: white;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        font-size: 1.2rem;
+        padding: 12px 35px;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.2s;
+        box-shadow: 0 3px 10px rgba(255, 102, 125, 0.2);
+      }
+
+      .cta-button:hover {
+        background-color: #e84e65; /* Slightly darker shade of accent1 */
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 102, 125, 0.3);
+        color: white; /* Explicitly keep text white */
+      }
+
+      /* ===== RESPONSIVE STYLES ===== */
+      @media (max-width: 1100px) {
+        .logo-container {
+          position: static;
+          display: block;
+          margin-bottom: 20px;
+          width: 50px;
+          height: 50px;
+        }
+
+        .full-progress-container {
+          margin: 30px -15px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .sponsors {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .letter-container,
+        .thank-you-container {
+          transform: none;
+        }
+
+        .full-progress-container {
+          margin: 30px -10px;
+        }
+
+        .full-progress {
+          padding: 20px 15px 40px 10px;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .tier-content ul {
+          display: block;
+        }
+
+        .tier-content li {
+          margin-bottom: 12px;
+        }
+
+        .target {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .donate-now-link {
+          margin-top: 10px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .sponsors {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo-container">
+          <img src="https://avatars.githubusercontent.com/u/3210273?s=200&v=4" alt="Hanami Logo" class="hanami-logo" />
+        </div>
+
+        <h1>
+          Become a <span class="highlight">Hanami patron.</span>
+          <br />
+          Help us build a diverse future for Ruby.
+        </h1>
+
+        <p class="intro">
+          For more than a decade, we’ve been elevating Ruby. Now we’re preparing to take Hanami to the next level, and
+          <span class="handwritten">we need your help.</span
+          ><a href="#goals" class="inline-progress"><span class="inline-dot"></span> $23k of $70k goal</a>
+        </p>
+      </header>
+
+      <div class="main-content">
+        <!-- Letter with askew styling -->
+        <div class="letter-container">
+          <div class="letter">
+            <p>Dear #rubyfriends—</p>
+
+            <p>
+              For more than a decade (a billion gem installs and counting!), <a href="https://hanamirb.org">Hanami</a>,
+              <a href="https://dry-rb.org">Dry RB</a>, and <a href="https://rom-rb.org">ROM</a> have been elevating your
+              Ruby.
+            </p>
+
+            <p>
+              We’ve <strong>elevated your apps</strong>, giving you tools for strict data typing, flexible validation,
+              safe expression of business logic, dependency injection, maintainable database layers and more.
+            </p>
+
+            <p>
+              We’ve <strong>elevated your skills</strong>, helping you blend functional and object oriented styles and
+              create clearer data flows and separations of concern, leading to maintainable architectures that are a
+              pleasure to work on.
+            </p>
+
+            <p>
+              And we’ve <strong>elevated Ruby itself</strong>, providing both technical innovation and a friendly,
+              inclusive community.
+            </p>
+
+            <p>Now we’re preparing to take Hanami to the next level. This year, we will:</p>
+
+            <ul>
+              <li>
+                Merge Hanami with Dry RB and ROM to create a single compelling Ruby toolkit backed by a unified
+                community and maintainer team.
+              </li>
+              <li>Focus on helping our users become more successful with our tools.</li>
+              <li>Establish paid ongoing maintenance of Hanami for the very first time.</li>
+            </ul>
+
+            <p>
+              Together, these will put Hanami on a sustainable trajectory for our second decade and beyond. We’re here
+              for the long run.
+            </p>
+
+            <p>We need your help to make this happen! We need you and your Ruby business to become Hanami patrons.</p>
+
+            <p>
+              We’d love for you to join Mike Perham, Honeybadger, Brandon Weaver and OmbuLabs in ensuring a sustainable
+              future for Hanami, and a more diverse Ruby ecosystem.
+            </p>
+
+            <div class="signature">
+              — Tim Riley<br />
+              Hanami project lead
+            </div>
+          </div>
+        </div>
+
+        <section>
+          <h2 id="goals">Our goals</h2>
+
+          <p>
+            <strong>We’re aiming to raise USD $70k/year, ongoing.</strong>
+          </p>
+
+          <!-- Full-width progress bar -->
+          <div id="progress" class="full-progress-container">
+            <div class="full-progress">
+              <div class="progress-header">
+                <div class="current-amount">$23,000</div>
+                <div class="target">
+                  of $70,000 yearly goal
+                  <a href="https://github.com/sponsors/hanami" class="donate-now-link">Donate now!</a>
+                </div>
+              </div>
+
+              <div class="progress-bar-wrapper">
+                <div class="progress-bar">
+                  <div class="progress-fill"></div>
+                </div>
+
+                <div class="percentage-tick">33%</div>
+
+                <div class="progress-milestones">
+                  <div class="milestone-tick m1">$40k</div>
+                  <div class="milestone-tick m2">$70k</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>With this funding, we can:</p>
+
+          <ul>
+            <li>
+              Continue to make improvements, fixes and releases of all gems,
+              <em>including renewed attention on Dry RB and ROM.</em>
+            </li>
+            <li>
+              Improve the Hanami developer experience. Better CLI, more helpful errors, easier testing approaches, even
+              an LSP.
+            </li>
+            <li>Write new learning material and documentation.</li>
+            <li>Create a new Hanami community hub to bring users together from across the whole ecosystem.</li>
+          </ul>
+
+          <div class="milestone" id="milestone-1">
+            <h3><span class="milestone-number">Milestone 1:</span> $40k</h3>
+            <div class="milestone-info">
+              <div class="milestone-avatar">
+                <img src="https://avatars.githubusercontent.com/u/3134?v=4" alt="Tim Riley" />
+              </div>
+              <div>
+                <div class="milestone-person"><a href="https://github.com/timriley" target="_blank">Tim Riley</a></div>
+                <div class="milestone-role">Hanami project lead</div>
+              </div>
+            </div>
+            <p>1 day/week of ongoing work from Tim, plus a small reserve for community and promotional activities.</p>
+            <p>
+              Your support can give Hanami paid ongoing maintenance for the very first time. Help me lead Hanami without
+              burning out! 😅
+            </p>
+          </div>
+
+          <div class="milestone" id="milestone-2">
+            <h3><span class="milestone-number">Milestone 2:</span> $70k</h3>
+            <div class="milestone-info">
+              <div class="milestone-avatar">
+                <img src="https://avatars.githubusercontent.com/u/632942?v=4" alt="Sean Collins" />
+              </div>
+              <div>
+                <div class="milestone-person"><a href="https://github.com/cllns" target="_blank">Sean Collins</a></div>
+                <div class="milestone-role">Long-time Hanami contributor</div>
+              </div>
+            </div>
+            <p>1 day/week of ongoing work from Sean.</p>
+            <p>
+              Hanami is bigger than any one person, and we’re better when we band together! I would be delighted to
+              bring on Sean as a second paid maintainer before increasing my own time.
+            </p>
+          </div>
+
+          <div class="note">
+            <p>
+              <strong>The fineprint</strong> — This is not an "all-or-nothing" fundraising campaign. We will put any
+              financial support to immediate use for work on Hanami. Your money will go far, as it will directly fund
+              Ruby gem development; there is no administrative overhead in Hanami’s operations.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>You’re in good company</h2>
+          <p>Thank you to these amazing people, who are already supporting Hanami’s future!</p>
+
+          <div class="sponsors-wrapper">
+            <div class="sponsors">
+              <div class="sponsor-logo">Logo 1</div>
+              <div class="sponsor-logo">Logo 2</div>
+              <div class="sponsor-logo">Logo 3</div>
+              <div class="sponsor-logo">Logo 4</div>
+              <div class="sponsor-logo">Logo 5</div>
+              <div class="sponsor-logo">Logo 6</div>
+            </div>
+          </div>
+
+          <div class="testimonials">
+            <h3>Hear from our patrons</h3>
+
+            <div class="testimonial-list">
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  Ruby has a problem: it’s mostly a monoculture around Rails. Merb and Sinatra provided valuable app
+                  framework options in the past, I believe we need new options for the future.
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-name">Mike Perham</div>
+                  <div class="testimonial-role">Sidekiq</div>
+                </div>
+              </div>
+
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed aliquam,
+                  nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus
+                  consectetuer.
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-name">Joshua Wood</div>
+                  <div class="testimonial-role">Honeybadger</div>
+                </div>
+              </div>
+
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem
+                  neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio.
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-name">Ernesto Tagwerker</div>
+                  <div class="testimonial-role">OmbuLabs</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Business tiers section - extremely minimal -->
+        <section class="tiers-section">
+          <h2>Become a business patron</h2>
+
+          <p>As a Hanami patron, you’ll receive several direct benefits:</p>
+
+          <ul class="benefits-list">
+            <li>Private chat with Hanami maintainers</li>
+            <li>Priority attention on your issues or requests</li>
+            <li>Your logo and link on the brand new Hanami website</li>
+            <li>Shoutouts on social media and in release announcements</li>
+          </ul>
+
+          <div class="emphasis">Most important of all, you’ll be creating a healthy and diverse future for Ruby.</div>
+
+          <p>
+            The Hanami team works at the forefront of exploring new avenues for Ruby apps. Our continued success can
+            help bring about a new kind of inclusive multilateralism in Ruby, for tools and people both.
+          </p>
+
+          <p>
+            By supporting Hanami, you can count yourself among the true <em>avant garde</em> of Ruby businesses. This is
+            your chance to be the first in these ranks.
+          </p>
+
+          <!-- Premium tier -->
+          <div class="tier-vertical tier-1">
+            <div class="tier-header">
+              <div class="tier-price">$12,000/year</div>
+            </div>
+            <div class="tier-content">
+              <ul>
+                <li>Large logo on Hanami home page</li>
+                <li>Logo in footer of all Hanami pages, including docs</li>
+                <li>Shoutout in every release</li>
+                <li>Regular social media mentions</li>
+                <li>Access to private chat</li>
+                <li>Priority for issues & requests</li>
+                <li>Twice-yearly call with Tim</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Standard tier -->
+          <div class="tier-vertical tier-2">
+            <div class="tier-header">
+              <div class="tier-price">$6,000/year</div>
+            </div>
+            <div class="tier-content">
+              <ul>
+                <li>Medium logo on Hanami home page</li>
+                <li>Shoutout in every release</li>
+                <li>Regular social media mentions</li>
+                <li>Access to private chat</li>
+                <li>Priority for issues & requests</li>
+                <li>Yearly call with Tim</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Basic tier -->
+          <div class="tier-vertical tier-3">
+            <div class="tier-header">
+              <div class="tier-price">$3,000/year</div>
+            </div>
+            <div class="tier-content">
+              <ul>
+                <li>Small logo on Hanami home page</li>
+                <li>Social media shoutouts</li>
+                <li>Access to private chat</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tier-footnote">
+            <p>
+              Please <a href="mailto:sponsorships@hanamirb.org">reach out</a> if you want to discuss a different yearly
+              commitment.
+            </p>
+            <p>
+              Thank you to <a href="https://rubycentral.org">Ruby Central</a> for handling our yearly business
+              contributions!
+            </p>
+          </div>
+
+          <div class="cta-container">
+            <a href="mailto:sponsorships@hanamirb.org" class="cta-button">Become a business patron</a>
+          </div>
+        </section>
+        <section>
+          <h2>Lend us your support</h2>
+          <p>We welcome any kind of support from Ruby community members! ❤️</p>
+
+          <p>You can:</p>
+          <ul>
+            <li>
+              Become a community patron. Support Hanami through
+              <a href="https://github.com/sponsors/hanami"><strong>GitHub Sponsors</strong></a> at whatever amount you
+              choose.
+            </li>
+            <li>Bring this pitch to the financial decision-makers at your workplace.</li>
+            <li>Share this post on social media. Big things are happening for Hanami and we want everyone to know.</li>
+          </ul>
+        </section>
+
+        <div class="thank-you-container">
+          <div class="thank-you">
+            <p>
+              Thank you for your consideration. This is a big step for us, and we appreciate <em>anything</em> you can
+              do to help.
+            </p>
+            <p>
+              Please feel free to <a href="mailto:sponsorships@hanamirb.org">contact me</a> directly if you have any
+              questions at all.
+            </p>
+            <p>Together, we can make a better Ruby.</p>
+            <div class="signature-with-avatar">
+              <img src="https://avatars.githubusercontent.com/u/3134?v=4" alt="Tim Riley" class="avatar" />
+              <div class="signature">— Tim<br /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
