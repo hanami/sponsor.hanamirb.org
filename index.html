@@ -876,6 +876,152 @@
           grid-template-columns: 1fr;
         }
       }
+
+      /* Dark mode */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary: #5ca2c4;
+          --accent1: #ff8095;
+          --accent2: #7fd8d5;
+          --accent3: #90e6d1;
+          --text: #e1e1e1;
+          --light-bg: #1f2328;
+          --warm-white: #292d33;
+          --border-color: #3e444c;
+          --card-bg: #252a31;
+          --progress-bg: #3a3a3a;
+          --testimonial-border: #ff8095;
+        }
+
+        body {
+          background-color: var(--warm-white);
+          color: var(--text);
+        }
+
+        h1,
+        h2,
+        h3 {
+          color: var(--primary);
+        }
+
+        h1 .highlight {
+          color: var(--accent1);
+        }
+
+        a {
+          color: var(--primary);
+          text-decoration-color: rgba(92, 162, 196, 0.4);
+        }
+
+        a:hover {
+          color: var(--accent1);
+          text-decoration-color: rgba(255, 128, 149, 0.5);
+        }
+
+        strong {
+          color: var(--primary);
+        }
+
+        .letter-container,
+        .thank-you-container {
+          background-color: var(--card-bg);
+          border: 1px solid var(--border-color);
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .letter-container::before,
+        .thank-you-container::before {
+          background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233e444c' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 5v1H5V0zm1 5v1H5v-1h1z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .signature {
+          border-top-color: var(--border-color);
+        }
+
+        .inline-progress {
+          background-color: rgba(255, 128, 149, 0.15);
+        }
+
+        .inline-progress:hover {
+          background-color: rgba(255, 128, 149, 0.25);
+        }
+
+        .full-progress {
+          border-color: var(--border-color);
+          background-color: var(--card-bg);
+        }
+
+        .progress-bar {
+          background-color: var(--progress-bg);
+        }
+
+        .milestone-tick::before {
+          background-color: #666;
+        }
+
+        .testimonial {
+          border-left-color: var(--testimonial-border);
+        }
+
+        .testimonial-name {
+          color: var(--primary);
+        }
+
+        .testimonial-role,
+        .testimonial-role::before {
+          color: #999;
+        }
+
+        .sponsor-logo {
+          background-color: #383838;
+          color: #aaa;
+        }
+
+        .note {
+          color: #aaa;
+        }
+
+        .tier-vertical::before {
+          background-color: var(--border-color);
+        }
+
+        .tier-footnote {
+          border-top-color: var(--border-color);
+          color: #aaa;
+        }
+
+        .signature-with-avatar {
+          border-top-color: var(--border-color);
+        }
+
+        .avatar {
+          border-color: var(--border-color);
+        }
+
+        .cta-button {
+          background-color: var(--accent1);
+          box-shadow: 0 3px 10px rgba(255, 128, 149, 0.2);
+        }
+
+        .cta-button:hover {
+          background-color: #ff6a84;
+          box-shadow: 0 5px 15px rgba(255, 128, 149, 0.4);
+        }
+
+        /* Progress fill retains its original color but with slightly different animation colors */
+        .progress-fill::after {
+          background-image: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.15) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.15) 75%,
+            transparent 75%,
+            transparent
+          );
+        }
+      }
     </style>
   </head>
   <body>
