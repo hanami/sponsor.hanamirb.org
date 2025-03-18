@@ -513,24 +513,51 @@
       }
 
       .sponsors {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        margin: 30px 0 40px;
-        width: 100%;
-        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 50px 60px;
+        margin: 40px 0;
       }
 
       .sponsor-logo {
-        background-color: #eee;
-        aspect-ratio: 16/9;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 4px;
-        font-family: "Source Sans Pro", sans-serif;
-        color: #999;
-        width: 100%;
+      }
+
+      /* Media query for smaller screens */
+      @media (max-width: 900px) {
+        .sponsors {
+          gap: 40px;
+          padding: 0 20px;
+        }
+
+        .sponsor-logo img {
+          max-width: 220px;
+          height: auto;
+        }
+      }
+
+      /* Media query for phones */
+      @media (max-width: 600px) {
+        .sponsors {
+          flex-direction: column;
+          align-items: center;
+          gap: 40px;
+        }
+
+        .sponsor-logo img {
+          max-width: 260px;
+          height: auto;
+          width: 100%;
+        }
+
+        /* Extra space above FastRuby logo on phones */
+        .sponsor-logo:nth-child(3) {
+          margin-top: 15px;
+        }
       }
 
       /* ===== TESTIMONIALS ===== */
@@ -826,10 +853,6 @@
       }
 
       @media (max-width: 900px) {
-        .sponsors {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
         .container {
           padding: 20px;
         }
@@ -868,12 +891,6 @@
 
         .donate-now-link {
           margin-top: 10px;
-        }
-      }
-
-      @media (max-width: 500px) {
-        .sponsors {
-          grid-template-columns: 1fr;
         }
       }
 
@@ -970,11 +987,6 @@
         .testimonial-role,
         .testimonial-role::before {
           color: #999;
-        }
-
-        .sponsor-logo {
-          background-color: #383838;
-          color: #aaa;
         }
 
         .note {
@@ -1201,12 +1213,20 @@
 
           <div class="sponsors-wrapper">
             <div class="sponsors">
-              <div class="sponsor-logo">Logo 1</div>
-              <div class="sponsor-logo">Logo 2</div>
-              <div class="sponsor-logo">Logo 3</div>
-              <div class="sponsor-logo">Logo 4</div>
-              <div class="sponsor-logo">Logo 5</div>
-              <div class="sponsor-logo">Logo 6</div>
+              <!-- Sidekiq -->
+              <a href="https://sidekiq.org" target="_blank" class="sponsor-logo">
+                <img src="images/sidekiq.svg" alt="Sidekiq logo" width="220" />
+              </a>
+
+              <!-- Honeybadger -->
+              <a href="https://www.honeybadger.io" target="_blank" class="sponsor-logo">
+                <img src="images/honeybadger.png" alt="Honeybadger" width="260" />
+              </a>
+
+              <!-- FastRuby.io -->
+              <a href="https://www.fastruby.io" target="_blank" class="sponsor-logo">
+                <img src="images/fastruby.png" alt="FastRuby.io logo" width="260" />
+              </a>
             </div>
           </div>
 
@@ -1227,24 +1247,14 @@
 
               <div class="testimonial">
                 <div class="testimonial-content">
-                  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed aliquam,
-                  nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus
-                  consectetuer.
-                </div>
-                <div class="testimonial-author">
-                  <div class="testimonial-name">Joshua Wood</div>
-                  <div class="testimonial-role">Honeybadger</div>
-                </div>
-              </div>
-
-              <div class="testimonial">
-                <div class="testimonial-content">
-                  Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem
-                  neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio.
+                  At FastRuby we believe in the value of diverse and inclusive communities. With our yearly contribution
+                  to Hanami we are investing in a framework that brings positive change to our beloved Ruby ecosystem.
+                  We envision a future where projects like Hanami, Roda, Sinatra, Cuba, and Padrino push the boundaries
+                  of what's possible in Ruby.
                 </div>
                 <div class="testimonial-author">
                   <div class="testimonial-name">Ernesto Tagwerker</div>
-                  <div class="testimonial-role">OmbuLabs</div>
+                  <div class="testimonial-role">FastRuby.io</div>
                 </div>
               </div>
             </div>
