@@ -204,6 +204,31 @@
         }
       }
 
+      /* ===== NAV ===== */
+      .simple-nav {
+        margin: 1em 0 1.5em;
+        line-height: 1.5;
+        font-size: 0.9em;
+      }
+
+      .nav-prefix {
+        color: #777;
+        margin-right: 8px;
+        font-size: 0.95em;
+      }
+
+      .dot-separator {
+        display: inline-block;
+        margin: 0 4px;
+        color: #bbb;
+        font-size: 1em;
+        position: relative;
+        text-align: center;
+        width: 4px;
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+
       /* ===== MAIN CONTENT LAYOUT ===== */
       .main-content {
         max-width: 700px;
@@ -1078,6 +1103,17 @@
           <span class="handwritten">we need your help.</span
           ><a href="#goals" class="inline-progress"><span class="inline-dot"></span> $23k of $70k goal</a>
         </p>
+
+        <p class="simple-nav">
+          <span class="nav-prefix">Jump to:</span>
+          <a href="#goals">Our goals</a>
+          <span class="dot-separator">·</span>
+          <a href="#founding-patrons">Founding patrons</a>
+          <span class="dot-separator">·</span>
+          <a href="#business-patron">Become a patron</a>
+          <span class="dot-separator">·</span>
+          <a href="#support-us">Support us</a>
+        </p>
       </header>
 
       <div class="main-content">
@@ -1232,7 +1268,7 @@
         </section>
 
         <section>
-          <h2>You’re in good company</h2>
+          <h2 id="founding-patrons">You’re in good company</h2>
           <p>
             Thank you to these amazing people and businesses who are already supporting Hanami’s future! Maybe you can
             join them?
@@ -1290,7 +1326,7 @@
 
         <!-- Business tiers section - extremely minimal -->
         <section class="tiers-section">
-          <h2>Become a business patron</h2>
+          <h2 id="business-patron">Become a business patron</h2>
 
           <p>As a Hanami patron, you’ll receive several direct benefits:</p>
 
@@ -1377,7 +1413,7 @@
           </div>
         </section>
         <section>
-          <h2>Lend us your support</h2>
+          <h2 id="support-us">Support us in the community</h2>
           <p>We welcome any kind of support from Ruby community members! ❤️</p>
 
           <p>You can:</p>
